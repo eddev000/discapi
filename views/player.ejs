@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>DISC Films</title>
+</head>
+<style>
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #fff;
+        margin: 1.5rem;
+    }
+    video
+    {
+        width: 600px;
+    }
+    @media screen and (max-width: 960px) {
+        video
+        {
+            width: 100%;
+        }
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    i
+    {
+        font-size: 30px;
+    }
+    h1
+    {
+        color: #000;
+        font-weight: 600;
+    }
+    main, footer
+    {
+        margin-top: 90px;
+    }
+
+</style>
+<body>
+    <header>
+        <h2>
+            DISC<span class="text-muted">BOT</span>
+        </h2>
+    </header>
+    <main>
+        <div class="text-center embed-responsive">
+            <video class="embed-responsive" src="<%=url_film%>" controls></video>
+        </div>
+    </main>
+    <footer class="text-center text-muted border-top py-3">
+        <%- include('./footer.ejs') %>
+        <div class="social">
+            <ul class="list-unstyled d-flex justify-content-center gap-5">
+                <li class="ms-3"><a class="text-muted" href="#"><i class='bx bxl-twitter'></i></a></li>
+                <li><a class="text-muted"  href="#"><i class='bx bxl-telegram'></i></a></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
