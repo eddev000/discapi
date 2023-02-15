@@ -1,6 +1,5 @@
-import express from 'express'
-import filmes from './data/film.json'  assert {type: 'json'};
-
+const express = require('express')
+const filmes = require('./data/film.json')
 const app = express()
 
 
@@ -33,6 +32,10 @@ app.get('/categoria', (req, res) => {
     res.json(
         filmes.filter((title) => title.categoria === genero)
     )
+})
+
+app.get('/', (req, res) => {
+    res.send('Ok')
 })
 
 app.listen(5000)
